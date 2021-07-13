@@ -3,16 +3,16 @@
  <debug showDebugMenu="0" />
  <systemtable filter="All Interfaces">
   <columns>
-   <connections preferredWidth="159" />
+   <connections preferredWidth="191" />
    <irq preferredWidth="34" />
    <baseaddress preferredWidth="164" />
    <inputclock preferredWidth="139" />
-   <export preferredWidth="251" />
-   <description preferredWidth="334" />
+   <export preferredWidth="192" />
+   <description preferredWidth="186" />
    <name preferredWidth="154" />
   </columns>
  </systemtable>
  <library
-   expandedCategories="Library/University Program/Memory,Library/Processors and Peripherals,Library/Processors and Peripherals/Embedded Processors,Library/Basic Functions,Project,Library/University Program,Library,Library/University Program/Clock" />
+   expandedCategories="Library/Basic Functions,Project,Library,Library/Basic Functions/Simulation; Debug and Verification/Debug and Performance,Library/Basic Functions/Simulation; Debug and Verification" />
  <window width="1936" height="1056" x="-8" y="-8" />
 </preferences>
