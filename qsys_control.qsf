@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX 10 FPGA"
 set_global_assignment -name DEVICE 10M08DAF484C8GES
-set_global_assignment -name TOP_LEVEL_ENTITY BeMicro_MAX10_top
+set_global_assignment -name TOP_LEVEL_ENTITY qsys_control_top
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 15.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:09:22  JANUARY 26, 2017"
 set_global_assignment -name LAST_QUARTUS_VERSION "16.1.0 Lite Edition"
@@ -261,6 +261,16 @@ set_location_assignment PIN_N1 -to USER_LED[2]
 set_location_assignment PIN_R2 -to USER_LED[3]
 set_location_assignment PIN_T1 -to USER_LED[4]
 set_location_assignment PIN_T6 -to USER_LED[6]
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name QIP_FILE nios2_control/synthesis/nios2_control.qip
+set_global_assignment -name SDC_FILE BeMicro_MAX10_top.sdc
+set_global_assignment -name VERILOG_FILE qsys_control_top.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name IO_STANDARD "2.5 V" -to ADT7420_CT
 set_instance_assignment -name IO_STANDARD "2.5 V" -to ADT7420_INT
 set_instance_assignment -name IO_STANDARD "2.5 V" -to ADT7420_SCL
@@ -898,11 +908,3 @@ set_instance_assignment -name SLEW_RATE 2 -to SDRAM_WEn
 set_instance_assignment -name SLEW_RATE 2 -to SFLASH_DATA
 set_instance_assignment -name SLEW_RATE 2 -to SFLASH_DCLK
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
-set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name QIP_FILE nios2_control/synthesis/nios2_control.qip
-set_global_assignment -name VERILOG_FILE BeMicro_MAX10_top.v
-set_global_assignment -name SDC_FILE BeMicro_MAX10_top.sdc
